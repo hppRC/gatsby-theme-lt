@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { navigate } from '@reach/router';
 
-import useDeck from './use-deck';
+import { useDeck } from './use-deck';
 
 const keys = {
   slide: 'mdx-deck-slide',
@@ -50,8 +50,8 @@ export const useStorage = () => {
   // store changes
   useEffect(() => {
     if (!focused) return;
-    localStorage.setItem(keys.slide, context.index);
-    localStorage.setItem(keys.step, context.step);
+    localStorage.setItem(keys.slide, context.index.toString());
+    localStorage.setItem(keys.step, context.step.toString());
   }, [focused, context.index, context.step]);
 };
 

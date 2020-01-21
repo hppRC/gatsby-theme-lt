@@ -10,8 +10,8 @@ const debug = Debug(pkg.name);
 let basePath;
 let contentPath;
 
-const DeckTemplate = require.resolve(`./src/templates/deck`);
-const DecksTemplate = require.resolve(`./src/templates/decks`);
+const DeckTemplate = require.resolve(`./src/templates/deck.tsx`);
+const DecksTemplate = require.resolve(`./src/templates/decks.tsx`);
 
 exports.onPreBootstrap = ({ store }, opts = {}) => {
   const { program } = store.getState();

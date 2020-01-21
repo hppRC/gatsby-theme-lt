@@ -1,4 +1,4 @@
-import merge from 'lodash.merge'
+import merge from 'lodash.merge';
 
 export const convertLegacyTheme = (legacyTheme = {}) => {
   const {
@@ -14,63 +14,63 @@ export const convertLegacyTheme = (legacyTheme = {}) => {
     css,
     heading,
     ...styles
-  } = legacyTheme
+  }: any = legacyTheme;
 
   const theme = {
     googleFont,
     colors: {
       ...colors,
       primary: colors.link,
-      muted: colors.codeBackground,
+      muted: colors.codeBackground
     },
     fonts: {
       body: font,
       heading: font,
-      monospace,
+      monospace
     },
     text: {
-      heading,
+      heading
     },
     styles: merge(
       {
         root: css,
         h1: {
-          variant: 'text.heading',
+          variant: 'text.heading'
         },
         h2: {
-          variant: 'text.heading',
+          variant: 'text.heading'
         },
         h3: {
-          variant: 'text.heading',
+          variant: 'text.heading'
         },
         h4: {
-          variant: 'text.heading',
+          variant: 'text.heading'
         },
         h5: {
-          variant: 'text.heading',
+          variant: 'text.heading'
         },
         h6: {
-          variant: 'text.heading',
+          variant: 'text.heading'
         },
         code: {
           fontFamily: 'monospace',
           color: 'code',
-          bg: 'codeBackground',
+          bg: 'codeBackground'
         },
         pre: {
           fontFamily: 'monospace',
           color: 'code',
-          bg: 'codeBackground',
-        },
+          bg: 'codeBackground'
+        }
       },
       styles
-    ),
-  }
+    )
+  };
 
   return {
     components,
-    theme,
-  }
-}
+    theme
+  };
+};
 
-export default convertLegacyTheme
+export default convertLegacyTheme;

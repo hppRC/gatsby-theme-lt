@@ -2,7 +2,7 @@ import { useSwipeable } from 'react-swipeable';
 
 import { modes } from '../constants';
 import { next, previous } from '../navigate';
-import useDeck from './use-deck';
+import { useDeck } from './use-deck';
 
 export const toggleMode = (next: any) => (state: any) =>
   state.mode === next ? { mode: modes.normal } : { mode: next };

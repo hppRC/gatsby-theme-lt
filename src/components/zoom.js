@@ -1,6 +1,3 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
-
 export const Zoom = ({ ratio, zoom = 1, ...props }) => (
   <div
     sx={{
@@ -8,8 +5,9 @@ export const Zoom = ({ ratio, zoom = 1, ...props }) => (
       width: '100%',
       position: 'relative',
       height: ratio ? 0 : '100%',
-      pb: ratio ? `${(1 / ratio) * 100}%` : 0,
-    }}>
+      pb: ratio ? `${(1 / ratio) * 100}%` : 0
+    }}
+  >
     <div
       {...props}
       sx={{
@@ -23,10 +21,10 @@ export const Zoom = ({ ratio, zoom = 1, ...props }) => (
         width: `${(1 / zoom) * 100}%`,
         height: `${(1 / zoom) * 100}%`,
         transformOrigin: '0 0',
-        transform: `scale(${zoom})`,
+        transform: `scale(${zoom})`
       }}
     />
   </div>
-)
+);
 
-export default Zoom
+export default Zoom;

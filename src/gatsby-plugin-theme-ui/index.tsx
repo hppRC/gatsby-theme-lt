@@ -4,81 +4,81 @@ export default {
     background: '#fff',
     primary: '#07c',
     secondary: '#80c',
-    muted: '#f6f6ff',
+    muted: '#f6f6ff'
   },
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'inherit',
     monospace: '"Roboto Mono", Menlo, monospace',
-    ui: 'system-ui, sans-serif',
+    ui: 'system-ui, sans-serif'
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.125
   },
   fontWeights: {
     body: 500,
     heading: 700,
-    bold: 700,
+    bold: 700
   },
   text: {
     heading: {
       fontFamily: 'heading',
       lineHeight: 'heading',
-      fontWeight: 'heading',
-    },
+      fontWeight: 'heading'
+    }
   },
   styles: {
     Slide: {
       fontFamily: 'body',
-      fontSize: [3, 4, 5, 6],
+      fontSize: [3, 4, 5, 6]
     },
     h1: {
-      variant: 'text.heading',
+      variant: 'text.heading'
     },
     h2: {
-      variant: 'text.heading',
+      variant: 'text.heading'
     },
     h3: {
-      variant: 'text.heading',
+      variant: 'text.heading'
     },
     h4: {
-      variant: 'text.heading',
+      variant: 'text.heading'
     },
     h5: {
-      variant: 'text.heading',
+      variant: 'text.heading'
     },
     h6: {
-      variant: 'text.heading',
+      variant: 'text.heading'
     },
     a: {
-      color: 'primary',
+      color: 'primary'
     },
     ul: {
-      m: 0,
+      m: 0
     },
     ol: {
-      m: 0,
+      m: 0
     },
     inlineCode: {
-      fontFamily: 'monospace',
+      fontFamily: 'monospace'
     },
     code: {
-      fontFamily: 'monospace',
+      fontFamily: 'monospace'
     },
     pre: {
       fontFamily: 'monospace',
-      p: 3,
+      p: 3
     },
     img: {
       maxWidth: '100%',
       height: 'auto',
-      objectFit: 'cover',
+      objectFit: 'cover'
     },
     table: {
       width: '100%',
       borderCollapse: 'separate',
-      borderSpacing: 0,
+      borderSpacing: 0
     },
     th: {
       textAlign: 'left',
@@ -86,7 +86,7 @@ export default {
       paddingTop: '.25em',
       paddingBottom: '.25em',
       borderBottom: '1px solid',
-      verticalAlign: 'top',
+      verticalAlign: 'top'
     },
     td: {
       textAlign: 'left',
@@ -94,10 +94,10 @@ export default {
       paddingTop: '.25em',
       paddingBottom: '.25em',
       borderBottom: '1px solid',
-      verticalAlign: 'top',
+      verticalAlign: 'top'
     },
     blockquote: {
-      fontWeight: 'bold',
-    },
-  },
-}
+      fontWeight: 'bold'
+    }
+  }
+};

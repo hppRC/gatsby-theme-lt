@@ -1,11 +1,10 @@
-/* eslint-disable */
 import { useEffect } from 'react';
+import { modes } from 'src/constants';
+import { next, previous } from 'src/navigate';
 
 import { navigate } from '@reach/router';
 
-import { modes } from '../constants';
-import { next, previous } from '../navigate';
-import useDeck from './use-deck';
+import { useDeck } from './use-deck';
 
 const keys = {
   right: 39,
