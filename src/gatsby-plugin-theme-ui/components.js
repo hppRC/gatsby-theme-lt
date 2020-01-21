@@ -7,27 +7,29 @@ import {
   Horizontal,
   Invert,
   Split,
-  SplitRight,
-} from '..'
+  SplitRight
+} from '..';
 // hack for gatsby-plugin-mdx caching bug
-import {
-  dark,
-  future,
-  condensed,
-  yellow,
-  swiss,
-  poppins,
-  book,
-  script,
-  comic,
-  notes,
-  lobster,
-  hack,
-  rye,
-  big,
-  aspect,
-  aspect43,
-} from '@mdx-deck/themes'
+
+// TODO: themesがいろんなものに依存しすぎているので後回し
+// import {
+//   dark,
+//   future,
+//   condensed,
+//   yellow,
+//   swiss,
+//   poppins,
+//   book,
+//   script,
+//   comic,
+//   notes,
+//   lobster,
+//   hack,
+//   rye,
+//   big,
+//   aspect,
+//   aspect43
+// } from '@mdx-deck/themes';
 
 export default {
   Appear,
@@ -38,22 +40,22 @@ export default {
   Horizontal,
   Invert,
   Split,
-  SplitRight,
+  SplitRight
   // hack for gatsby-plugin-mdx caching bug
-  dark,
-  future,
-  condensed,
-  yellow,
-  swiss,
-  poppins,
-  book,
-  script,
-  comic,
-  notes,
-  lobster,
-  hack,
-  rye,
-  big,
-  aspect,
-  aspect43,
-}
+  // dark,
+  // future,
+  // condensed,
+  // yellow,
+  // swiss,
+  // poppins,
+  // book,
+  // script,
+  // comic,
+  // notes,
+  // lobster,
+  // hack,
+  // rye,
+  // big,
+  // aspect,
+  // aspect43
+};

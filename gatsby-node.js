@@ -3,7 +3,7 @@ const fs = require(`fs`);
 const path = require(`path`);
 const mkdirp = require(`mkdirp`);
 const Debug = require(`debug`);
-const pkg = require("./package.json");
+const pkg = require('./package.json');
 
 const debug = Debug(pkg.name);
 
@@ -46,10 +46,10 @@ const mdxResolverPassthrough = fieldName => async (
 };
 
 const resolveTitle = async (...args) => {
-  const headings = await mdxResolverPassthrough("headings")(...args);
-  if (!headings) return "";
+  const headings = await mdxResolverPassthrough('headings')(...args);
+  if (!headings) return '';
   const [first = {}] = headings;
-  return first.value || "";
+  return first.value || '';
 };
 
 exports.sourceNodes = ({ actions, schema }) => {
@@ -103,10 +103,10 @@ exports.createPages = async ({ graphql, actions, reporter, pathPrefix }) => {
   // single deck mode
   if (decks.length === 1) {
     const [deck] = decks;
-    const base = basePath === "/" ? "" : basePath;
-    const matchPath = [base, "*"].join("/");
+    const base = basePath === '/' ? '' : basePath;
+    const matchPath = [base, '*'].join('/');
 
-    const slug = [pathPrefix, base].filter(Boolean).join("");
+    const slug = [pathPrefix, base].filter(Boolean).join('');
 
     createPage({
       path: basePath,
@@ -118,7 +118,7 @@ exports.createPages = async ({ graphql, actions, reporter, pathPrefix }) => {
       }
     });
     createPage({
-      path: base + "/print",
+      path: base + '/print',
       component: DeckTemplate,
       context: {
         ...deck.node,
@@ -129,8 +129,8 @@ exports.createPages = async ({ graphql, actions, reporter, pathPrefix }) => {
   }
 
   decks.forEach(({ node }, index) => {
-    const matchPath = [node.slug, "*"].join("/");
-    const slug = [pathPrefix, node.slug].filter(Boolean).join("");
+    const matchPath = [node.slug, '*'].join('/');
+    const slug = [pathPrefix, node.slug].filter(Boolean).join('');
 
     createPage({
       path: node.slug,
@@ -142,7 +142,7 @@ exports.createPages = async ({ graphql, actions, reporter, pathPrefix }) => {
       }
     });
     createPage({
-      path: slug + "/print",
+      path: slug + '/print',
       component: DeckTemplate,
       context: {
         ...node,
@@ -202,7 +202,7 @@ exports.onCreateNode = ({
 };
 
 exports.onCreateDevServer = ({ app }) => {
-  if (typeof process.send !== "function") return;
+  if (typeof process.send !== 'function') return;
   process.send({
     mdxDeck: true
   });
