@@ -1,9 +1,11 @@
 /* eslint-disable */
-import { useEffect } from "react";
-import { navigate } from "@reach/router";
-import useDeck from "./use-deck";
-import { modes } from "../constants";
-import { previous, next } from "../navigate";
+import { useEffect } from 'react';
+
+import { navigate } from '@reach/router';
+
+import { modes } from '../constants';
+import { next, previous } from '../navigate';
+import useDeck from './use-deck';
 
 const keys = {
   right: 39,
@@ -19,22 +21,22 @@ const keys = {
   pageDown: 34
 };
 
-const toggleMode = next => state =>
+const toggleMode = (next: any) => (state: any) =>
   state.mode === next ? { mode: modes.normal } : { mode: next };
 
-const inputElements = ["input", "select", "textarea", "a", "button"];
+const inputElements = ['input', 'select', 'textarea', 'a', 'button'];
 
 export const useKeyboard = () => {
   const context = useDeck();
 
   useEffect(() => {
-    const handleKeyDown = e => {
+    const handleKeyDown = (e: any) => {
       const { metaKey, ctrlKey, shiftKey, altKey } = e;
       if (metaKey || ctrlKey) return;
 
       // ignore custom keyboard shortcuts when elements are focused
-      const el = document.activeElement.tagName.toLowerCase();
-      if (inputElements.includes(el)) return;
+      const el = document?.activeElement?.tagName.toLowerCase();
+      if (!el || inputElements.includes(el)) return;
 
       if (shiftKey) {
         switch (e.keyCode) {
@@ -78,10 +80,10 @@ export const useKeyboard = () => {
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [context]);
 };
