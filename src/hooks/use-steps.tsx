@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
-import { useDeck } from './use-deck';
+import useDeck from './use-deck';
 
-export const useSteps = (length: number) => {
+export default (length: number) => {
   const context = useDeck();
   useEffect(() => {
     if (typeof context.register !== 'function') return;
@@ -11,5 +11,3 @@ export const useSteps = (length: number) => {
   if (context.preview) return length;
   return context.step;
 };
-
-export default useSteps;

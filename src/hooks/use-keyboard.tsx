@@ -4,7 +4,7 @@ import { next, previous } from 'src/navigate';
 
 import { navigate } from '@reach/router';
 
-import { useDeck } from './use-deck';
+import useDeck from './use-deck';
 
 const keys = {
   right: 39,
@@ -25,7 +25,7 @@ const toggleMode = (next: any) => (state: any) =>
 
 const inputElements = ['input', 'select', 'textarea', 'a', 'button'];
 
-export const useKeyboard = () => {
+export default () => {
   const context = useDeck();
 
   useEffect(() => {
@@ -86,5 +86,3 @@ export const useKeyboard = () => {
     };
   }, [context]);
 };
-
-export default useKeyboard;

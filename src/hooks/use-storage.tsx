@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 
 import { navigate } from '@reach/router';
 
-import { useDeck } from './use-deck';
+import useDeck from './use-deck';
 
 const keys = {
   slide: 'mdx-deck-slide',
   step: 'mdx-deck-step'
 };
 
-export const useStorage = () => {
+export default () => {
   const context = useDeck();
   const [focused, setFocused] = useState(false);
 
@@ -54,5 +54,3 @@ export const useStorage = () => {
     localStorage.setItem(keys.step, context.step.toString());
   }, [focused, context.index, context.step]);
 };
-
-export default useStorage;
