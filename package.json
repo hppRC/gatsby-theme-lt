@@ -42,6 +42,6 @@
     "remark-emoji": "^2.0.2",
     "remark-unwrap-images": "^1.0.0",
     "theme-ui": "^0.3.0",
-    "typescript": "^3.8.0-beta"
+    "typescript": "^4.0.0"
   }
 }
