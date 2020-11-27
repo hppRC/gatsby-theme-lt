@@ -20,7 +20,7 @@
     "@reach/router": "^1.2.1",
     "@types/lodash": "^4.14.149",
     "@types/lodash.merge": "^4.6.6",
-    "@types/react": "^16.9.18",
+    "@types/react": "^17.0.0",
     "debug": "^4.1.1",
     "gatsby": "^2.19.1",
     "gatsby-plugin-catch-links": "^2.1.24",
